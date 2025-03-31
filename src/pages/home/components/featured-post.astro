@@ -1,10 +1,9 @@
 ---
 import { CalendarIcon, Clock3Icon, ArrowRightIcon } from "lucide-react";
-import { Button, buttonVariants } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { cn } from "@/lib/utils";
-import FormattedDate from "@/components/FormattedDate.astro";
+import { cn, formatDate } from "@/lib/utils";
 
 const { title, image, pubDate, description, slug, readingTime } = Astro.props;
 ---
@@ -28,7 +27,7 @@ const { title, image, pubDate, description, slug, readingTime } = Astro.props;
         </h2>
         <div class="mb-4 flex items-center gap-2 text-sm text-muted-foreground">
           <CalendarIcon className="h-4 w-4" />
-          <span> <FormattedDate date={pubDate} /></span>
+          <span>{pubDate && formatDate(pubDate)}</span>
           <span class="mx-1">•</span>
           <Clock3Icon className="h-4 w-4" />
           <span>{readingTime} min read</span>
