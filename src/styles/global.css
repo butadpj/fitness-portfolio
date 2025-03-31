@@ -75,9 +75,6 @@
     line-height: 1.7;
   }
   main {
-    width: 720px;
-    max-width: calc(100% - 2em);
-    margin: auto;
     padding: 3em 1em;
   }
   h1,
@@ -152,19 +149,11 @@
     border-left: 4px solid var(--accent);
     padding: 0 0 0 20px;
     margin: 0px;
-    font-size: 1.333em;
+    font-size: 1.2em;
   }
   hr {
     border: none;
     border-top: 1px solid rgb(var(--gray-light));
-  }
-  @media (max-width: 720px) {
-    body {
-      font-size: 18px;
-    }
-    main {
-      padding: 1em;
-    }
   }
 
   .sr-only {

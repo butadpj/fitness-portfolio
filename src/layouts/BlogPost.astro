@@ -21,23 +21,7 @@ const {
   <head>
     <BaseHead title={title} description={description} />
     <style>
-      main {
-        width: calc(100% - 2em);
-        max-width: 100%;
-        margin: 0;
-      }
-      .hero-image {
-        width: 100%;
-      }
-      .hero-image img {
-        display: block;
-        margin: 0 auto;
-        border-radius: 12px;
-        box-shadow: var(--box-shadow);
-      }
       .prose {
-        width: 720px;
-        max-width: calc(100% - 2em);
         margin: auto;
         padding: 1em;
         color: rgb(var(--gray-dark));
@@ -63,7 +47,7 @@ const {
 
   <body>
     <Header />
-    <main class="!mx-auto">
+    <main class="!mx-auto md:max-w-3xl lg:max-w-4xl">
       <article>
         <div class="hero-content flex justify-center overflow-hidden">
           {
@@ -74,7 +58,7 @@ const {
                   height={510}
                   src={heroImage}
                   alt=""
-                  class="max-w-4xl max-h-[510px] object-contain"
+                  class="w-full max-w-4xl max-h-[510px] object-contain"
                 />
                 <span class="text-sm text-muted-foreground italic">
                   {heroImageDescription}
