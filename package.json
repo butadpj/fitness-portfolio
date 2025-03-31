@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "fitness-portfolio",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -10,8 +10,28 @@
   },
   "dependencies": {
     "@astrojs/mdx": "^4.2.2",
+    "@astrojs/react": "^4.2.2",
     "@astrojs/rss": "^4.0.11",
     "@astrojs/sitemap": "^3.3.0",
-    "astro": "^5.5.5"
+    "@radix-ui/react-avatar": "^1.1.3",
+    "@radix-ui/react-slot": "^1.1.2",
+    "@sentry/astro": "^9.10.1",
+    "@spotlightjs/astro": "^3.1.0",
+    "@tailwindcss/vite": "^4.0.17",
+    "@types/react": "^19.0.12",
+    "@types/react-dom": "^19.0.4",
+    "astro": "^5.5.5",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.485.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "tailwind-merge": "^3.0.2",
+    "tailwindcss": "^4.0.17",
+    "tw-animate-css": "^1.2.5"
+  },
+  "devDependencies": {
+    "@astrojs/ts-plugin": "^1.10.4",
+    "prettier-plugin-astro": "^0.14.1"
   }
 }

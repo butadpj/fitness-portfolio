@@ -1,0 +1,54 @@
+---
+import { CalendarIcon, Clock3Icon, ArrowRightIcon } from "lucide-react";
+import { Button, buttonVariants } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { cn } from "@/lib/utils";
+import FormattedDate from "@/components/FormattedDate.astro";
+
+const { title, image, pubDate, description, slug, readingTime } = Astro.props;
+---
+
+<div class="mb-16">
+  <Card className="overflow-hidden">
+    <div class="grid gap-6 md:grid-cols-2">
+      <div
+        class="relative aspect-video overflow-hidden md:aspect-auto md:h-full"
+      >
+        <img
+          src={image}
+          alt="Featured post image"
+          class="object-cover transition-transform duration-300 hover:scale-105 h-full"
+        />
+      </div>
+      <div class="flex flex-col justify-center p-6">
+        <Badge className="mb-4 w-fit" variant="outline"> Featured </Badge>
+        <h2 class="mb-2 text-3xl font-bold tracking-tight">
+          {title}
+        </h2>
+        <div class="mb-4 flex items-center gap-2 text-sm text-muted-foreground">
+          <CalendarIcon className="h-4 w-4" />
+          <span> <FormattedDate date={pubDate} /></span>
+          <span class="mx-1">•</span>
+          <Clock3Icon className="h-4 w-4" />
+          <span>{readingTime} min read</span>
+        </div>
+        <p class="mb-6 text-muted-foreground">
+          {description}
+        </p>
+        <div class="mt-auto flex items-center justify-between">
+          <a
+            href={slug}
+            class={cn(
+              buttonVariants({
+                variant: "default",
+              }),
+            )}
+          >
+            Read Article <ArrowRightIcon className="ml-2 h-4 w-4" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </Card>
+</div>
